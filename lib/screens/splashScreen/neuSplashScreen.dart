@@ -2,6 +2,7 @@
 
 import 'dart:async';
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:lottie/lottie.dart';
 import 'package:rounakmusicplayerapp/screens/introScreen/neuWalkthroughScreen.dart';
 import 'package:rounakmusicplayerapp/utils/neuConstants.dart';
@@ -40,13 +41,11 @@ class _NeuSplashScreenState extends State<NeuSplashScreen> {
                   Lottie.asset('assets/splashAnimation.json',height: 100,width: 100),
                   SizedBox(width: 20.0,),
                   Column(
-                    //crossAxisAlignment: CrossAxisAlignment.center,
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
                       Text("Rounak",
                           textScaleFactor: 1,
-                          style: TextStyle(
-                            letterSpacing: 5.0,
+                          style: GoogleFonts.montserrat(
                             color: Colors.white,
                             fontSize: screenHeight >= 700 ? 32.0 : 32.0,
                             fontWeight: FontWeight.w500,
@@ -54,9 +53,8 @@ class _NeuSplashScreenState extends State<NeuSplashScreen> {
                       SizedBox(height: 5.0,),
                       Text("झुमो गाओ और नाचो",
                           textScaleFactor: 1,
-                          style: TextStyle(
+                          style: GoogleFonts.montserrat(
                             color: ConstantColor.pinkButtonColor,
-                            letterSpacing: 2.0,
                             fontSize: screenHeight >= 700 ? 14.0 : 14.0,
                             fontWeight: FontWeight.w500,
                           )),

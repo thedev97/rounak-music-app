@@ -6,6 +6,7 @@ import 'dart:io';
 import 'package:flutter/services.dart';
 import 'package:flutter_neumorphic/flutter_neumorphic.dart';
 import 'package:flutter/cupertino.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:lottie/lottie.dart';
 import 'package:rounakmusicplayerapp/screens/neuMainScreen.dart';
 import 'package:rounakmusicplayerapp/utils/inputfeilds/neuInputFeild.dart';
@@ -161,7 +162,7 @@ class _NeuLoginState extends State<NeuLogin> {
         padding: EdgeInsets.fromLTRB(22.0, sizeHeight * 0.01, 0, 0),
         child: Text("Welcome",
             textScaleFactor: 1,
-            style: TextStyle(
+            style: GoogleFonts.lato(
               color: ConstantColor.darkModeColor,
               fontSize: sizeHeight >= 700 ? 12.0 : 12.0,
               fontWeight: FontWeight.w500,
@@ -179,7 +180,7 @@ class _NeuLoginState extends State<NeuLogin> {
         padding: EdgeInsets.fromLTRB(22.0, 15.0, 0, 0),
         child: Text("Sign In",
             textScaleFactor: 1,
-            style: TextStyle(
+            style: GoogleFonts.lato(
               color: Colors.white,
               fontSize: sizeHeight >= 700 ? 30.0 : 30.0,
               fontWeight: FontWeight.w900,
@@ -213,13 +214,6 @@ class _NeuLoginState extends State<NeuLogin> {
           },
           autoFocus: false,
         ),
-        /* Padding(
-          padding: EdgeInsets.only(left: 20.0),
-          child: Divider(
-            thickness: 2,
-            endIndent: 50,
-          ),
-        )*/
       ],
     );
   }
@@ -327,7 +321,9 @@ class _NeuLoginState extends State<NeuLogin> {
                     Navigator.pushReplacement(context,
                         CupertinoPageRoute(
                             builder: (BuildContext context) {
-                              return NeuMainScreen();
+                              return NeuMainScreen(
+                                phoneNumber: _phoneNumberEditingController.text,
+                              );
                             }));
                   });
                 },
@@ -347,7 +343,7 @@ class _NeuLoginState extends State<NeuLogin> {
                   child: Text(
                       "Continue",
                       textScaleFactor: 1,
-                      style: TextStyle(
+                      style: GoogleFonts.lato(
                         color:Colors.white,
                         fontSize: sizeHeight >= 700 ? 14.0 : 12.0,fontWeight: FontWeight.w400,)
                   ),
@@ -365,7 +361,7 @@ class _NeuLoginState extends State<NeuLogin> {
       child: Text(
           'We have sent you an OTP',
           textScaleFactor: 1.0,
-          style: TextStyle(
+          style: GoogleFonts.lato(
             color: Color(0xff4B4E4F),
             fontSize: sizeHeight >= 700 ? 14.0 : 12.0,
             fontWeight: FontWeight.w700,)
@@ -381,7 +377,7 @@ class _NeuLoginState extends State<NeuLogin> {
       child: Text(
           'Enter the 6 digit OTP sent to +91- ${_phoneNumberEditingController.text}',
           textScaleFactor: 1.0,
-          style: TextStyle(
+          style: GoogleFonts.lato(
             color:Color(0xff4B4E4F).withOpacity(0.7),
             fontSize: sizeHeight >= 700 ? 12.0 : 10.0,fontWeight: FontWeight.w400,)
       ),

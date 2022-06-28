@@ -2,6 +2,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_neumorphic/flutter_neumorphic.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:rounakmusicplayerapp/screens/signinScreen/neuLoginScreen.dart';
 import 'package:rounakmusicplayerapp/utils/neuConstants.dart';
 
@@ -115,8 +116,6 @@ class _NeuWalkThroughScreenState extends State<NeuWalkThroughScreen>  with Singl
       { required String images,
         required String titleOne,
         required String body}) {
-    var sizeWidth = MediaQuery.of(context).size.width;
-    var sizeHeight = MediaQuery.of(context).size.height;
     return Padding(
       padding: EdgeInsets.fromLTRB(50.0, 0.0, 50.0, 0.0),
       child: Column(
@@ -134,7 +133,7 @@ class _NeuWalkThroughScreenState extends State<NeuWalkThroughScreen>  with Singl
           SizedBox(height: 80.0,),
           Text(
               titleOne,
-              style: TextStyle(
+              style: GoogleFonts.lato(
                   color:ConstantColor.pinkButtonColor,
                   fontSize: 16.0,fontWeight: FontWeight.w500)
           ),
@@ -143,8 +142,7 @@ class _NeuWalkThroughScreenState extends State<NeuWalkThroughScreen>  with Singl
             width: MediaQuery.of(context).size.width * 0.6,
             child: Text(
               body,
-              // textScaleFactor: 1.0,
-              style: TextStyle(
+              style: GoogleFonts.lato(
                   height: 1.8,
                   color:ConstantColor.pinkButtonColor.withOpacity(0.65),
                   fontSize: 14.0,fontWeight: FontWeight.w400),
@@ -192,10 +190,6 @@ class _NeuWalkThroughScreenState extends State<NeuWalkThroughScreen>  with Singl
                           shadowLightColor: Colors.white.withOpacity(0.2),
                           shadowDarkColor: Colors.black54.withOpacity(0.7),
                           depth: 25,
-                        /*  border: NeumorphicBorder(
-                            color: Colors.grey.withOpacity(0.2),
-                            width: 1,
-                          ),*/
                           shadowLightColorEmboss: Colors.black54,
                           intensity: 5,
                           boxShape: NeumorphicBoxShape.circle()),
@@ -227,10 +221,6 @@ class _NeuWalkThroughScreenState extends State<NeuWalkThroughScreen>  with Singl
                           shadowLightColor: Colors.white.withOpacity(0.2),
                           shadowDarkColor: Colors.black54.withOpacity(0.7),
                           depth: 25,
-                        /*  border: NeumorphicBorder(
-                            color: Colors.grey.withOpacity(0.2),
-                            width: 1,
-                          ),*/
                           shadowLightColorEmboss: Colors.black54,
                           intensity: 5,
                           boxShape: NeumorphicBoxShape.circle()),
@@ -273,7 +263,7 @@ class _NeuWalkThroughScreenState extends State<NeuWalkThroughScreen>  with Singl
           child: Center(
             child: Text("GET STARTED",
                 textScaleFactor: 1,
-                style: TextStyle(
+                style: GoogleFonts.lato(
                   color: Colors.white,
                   fontSize: sizeHeight >= 700 ? 12.0 : 12.0,
                   fontWeight: FontWeight.w500,

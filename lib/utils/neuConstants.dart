@@ -10,9 +10,11 @@ class ConstantColor{
   static Color darkThemeLightShadowColor = Color(0xff282E2F);
   static Color lightThemeDarkShadowColor = Color(0xffF8F8F8);
   static Color lightThemeLightShadowColor = Color(0xffCECECE);
+  static Color goldThemeColor = Color(0xffFFD700);
   // Button text colors
   static Color darkThemeTextColor = Color(0xffed9c51);
   static Color pinkButtonColor = Color(0xffFF27B0);
+  static Color tabUnSelColor = Color(0xffCCAFA9);
   // Light theme
   static Color lightPrimaryColor = Color(0xfff5f5f5);
   static Color lightSecondaryColor = Color(0xffa73823);
