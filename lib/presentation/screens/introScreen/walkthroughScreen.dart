@@ -3,17 +3,18 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_neumorphic/flutter_neumorphic.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:rounakmusicplayerapp/screens/signinScreen/neuLoginScreen.dart';
-import 'package:rounakmusicplayerapp/utils/neuConstants.dart';
+import 'package:rounakmusicplayerapp/core/utils/neuConstants.dart';
+import 'package:rounakmusicplayerapp/presentation/screens/signinScreen/loginScreen.dart';
 
-class NeuWalkThroughScreen extends StatefulWidget {
-  const NeuWalkThroughScreen({Key? key}) : super(key: key);
+
+class WalkThroughScreen extends StatefulWidget {
+  const WalkThroughScreen({Key? key}) : super(key: key);
 
   @override
-  _NeuWalkThroughScreenState createState() => _NeuWalkThroughScreenState();
+  _WalkThroughScreenState createState() => _WalkThroughScreenState();
 }
 
-class _NeuWalkThroughScreenState extends State<NeuWalkThroughScreen>  with SingleTickerProviderStateMixin{
+class _WalkThroughScreenState extends State<WalkThroughScreen>  with SingleTickerProviderStateMixin{
   final _pageController = PageController(initialPage: 0);
   late AnimationController _animationController;
   bool next = true;
@@ -134,7 +135,7 @@ class _NeuWalkThroughScreenState extends State<NeuWalkThroughScreen>  with Singl
           Text(
               titleOne,
               style: GoogleFonts.lato(
-                  color:ConstantColor.pinkButtonColor,
+                  color: ConstantColor.pinkButtonColor,
                   fontSize: 16.0,fontWeight: FontWeight.w500)
           ),
           Container(
@@ -144,7 +145,7 @@ class _NeuWalkThroughScreenState extends State<NeuWalkThroughScreen>  with Singl
               body,
               style: GoogleFonts.lato(
                   height: 1.8,
-                  color:ConstantColor.pinkButtonColor.withOpacity(0.65),
+                  color: ConstantColor.pinkButtonColor.withOpacity(0.65),
                   fontSize: 14.0,fontWeight: FontWeight.w400),
               textAlign: TextAlign.center,
             ),
@@ -274,7 +275,7 @@ class _NeuWalkThroughScreenState extends State<NeuWalkThroughScreen>  with Singl
             Navigator.pushReplacement(context,
                 CupertinoPageRoute(
                     builder: (BuildContext context) {
-                      return NeuLogin();
+                      return LoginScreen();
                     }));
           },
         ),

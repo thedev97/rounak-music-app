@@ -1,6 +1,4 @@
-
 import 'dart:async';
-//import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'dart:io';
 import 'package:flutter/services.dart';
@@ -8,18 +6,18 @@ import 'package:flutter_neumorphic/flutter_neumorphic.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:lottie/lottie.dart';
-import 'package:rounakmusicplayerapp/screens/neuMainScreen.dart';
-import 'package:rounakmusicplayerapp/utils/inputfeilds/neuInputFeild.dart';
-import 'package:rounakmusicplayerapp/utils/neuConstants.dart';
+import 'package:rounakmusicplayerapp/core/utils/inputfeilds/neuInputFeild.dart';
+import 'package:rounakmusicplayerapp/core/utils/neuConstants.dart';
+import '../mainScreen.dart';
 
-class NeuLogin extends StatefulWidget {
-  const NeuLogin({Key? key}) : super(key: key);
+class LoginScreen extends StatefulWidget {
+  const LoginScreen({Key? key}) : super(key: key);
 
   @override
-  _NeuLoginState createState() => _NeuLoginState();
+  _LoginScreenState createState() => _LoginScreenState();
 }
 
-class _NeuLoginState extends State<NeuLogin> {
+class _LoginScreenState extends State<LoginScreen> {
   late TextEditingController _phoneNumberEditingController;
   late TextEditingController _otpController;
   final GlobalKey<ScaffoldState> _scaffoldKey = new GlobalKey<ScaffoldState>();
@@ -193,7 +191,7 @@ class _NeuLoginState extends State<NeuLogin> {
   Widget numberForm() {
     return Column(
       children: [
-        NeuInputFieldThree(
+        InputFieldThree(
           controller: _phoneNumberEditingController,
           edgeInsetsGeometry: EdgeInsets.symmetric(horizontal: 10.0),
           obscureText: false,
@@ -272,7 +270,7 @@ class _NeuLoginState extends State<NeuLogin> {
                     padding: EdgeInsets.only(left: 15.0,right: 15.0),
                     child: StatefulBuilder(
                         builder: (BuildContext context, StateSetter setState) {
-                          return NeuInputFieldThree(
+                          return InputFieldThree(
                           controller: _otpController,
                           maxLength: 6,
                           autoFocus: false,
@@ -321,7 +319,7 @@ class _NeuLoginState extends State<NeuLogin> {
                     Navigator.pushReplacement(context,
                         CupertinoPageRoute(
                             builder: (BuildContext context) {
-                              return NeuMainScreen(
+                              return MainScreen(
                                 phoneNumber: _phoneNumberEditingController.text,
                               );
                             }));

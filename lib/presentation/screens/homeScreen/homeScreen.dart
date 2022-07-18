@@ -2,18 +2,18 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_neumorphic/flutter_neumorphic.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:rounakmusicplayerapp/screens/profileScreen/neuProfileScreen.dart';
-import 'package:rounakmusicplayerapp/utils/neuConstants.dart';
+import 'package:rounakmusicplayerapp/core/utils/neuConstants.dart';
+import 'package:rounakmusicplayerapp/presentation/screens/profileScreen/profileScreen.dart';
 
-class NeuHomeScreen extends StatefulWidget {
+class HomeScreen extends StatefulWidget {
   String? phoneNumber;
-  NeuHomeScreen({Key? key, this.phoneNumber}) : super(key: key);
+  HomeScreen({Key? key, this.phoneNumber}) : super(key: key);
 
   @override
-  _NeuHomeScreenState createState() => _NeuHomeScreenState();
+  _HomeScreenState createState() => _HomeScreenState();
 }
 
-class _NeuHomeScreenState extends State<NeuHomeScreen> {
+class _HomeScreenState extends State<HomeScreen> {
   final GlobalKey<ScaffoldState> _homeScaffoldKey =
       new GlobalKey<ScaffoldState>();
 
@@ -81,7 +81,7 @@ class _NeuHomeScreenState extends State<NeuHomeScreen> {
                   Future.delayed(Duration(microseconds: 50), () {
                     Navigator.push(context,
                         CupertinoPageRoute(builder: (BuildContext context) {
-                      return NeuProfileScreen(
+                      return ProfileScreen(
                         profileName: "AVATAR",
                         phoneNumber: widget.phoneNumber,
                       );

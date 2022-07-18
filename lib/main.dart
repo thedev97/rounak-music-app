@@ -1,8 +1,6 @@
-
-//import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:rounakmusicplayerapp/screens/splashScreen/neuSplashScreen.dart';
+import 'presentation/screens/splashScreen/splashScreen.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -20,7 +18,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       title: "",
-      home: NeuSplashScreen(),
+      home: SplashScreen(),
     );
   }
 }

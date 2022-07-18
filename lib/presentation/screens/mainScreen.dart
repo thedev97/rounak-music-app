@@ -2,25 +2,23 @@ import 'package:animations/animations.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/services.dart';
 import 'package:fluttertoast/fluttertoast.dart';
-import 'package:lottie/lottie.dart';
-import 'package:rounakmusicplayerapp/utils/neuConstants.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_neumorphic/flutter_neumorphic.dart';
+import 'package:rounakmusicplayerapp/core/utils/neuConstants.dart';
 import 'dart:io' show Platform;
-import 'discoverScreen/neuDiscoverScreen.dart';
-import 'homeScreen/neuHomeScreen.dart';
-import 'libraryScreen/neuLibraryScreen.dart';
-import 'profileScreen/neuProfileScreen.dart';
+import 'discoverScreen/discoverScreen.dart';
+import 'homeScreen/homeScreen.dart';
+import 'libraryScreen/libraryScreen.dart';
 
-class NeuMainScreen extends StatefulWidget {
+class MainScreen extends StatefulWidget {
   String? phoneNumber;
-  NeuMainScreen({Key? key, this.phoneNumber}) : super(key: key);
+  MainScreen({Key? key, this.phoneNumber}) : super(key: key);
 
   @override
-  _NeuMainScreenState createState() => _NeuMainScreenState();
+  _MainScreenState createState() => _MainScreenState();
 }
 
-class _NeuMainScreenState extends State<NeuMainScreen> {
+class _MainScreenState extends State<MainScreen> {
   int _selectedIndex = 0;
   bool showOptions = false;
   late List<Widget> _screenList;
@@ -32,11 +30,11 @@ class _NeuMainScreenState extends State<NeuMainScreen> {
   void initState() {
     super.initState();
     _screenList = <Widget>[
-      NeuHomeScreen(
+      HomeScreen(
         phoneNumber: widget.phoneNumber,
       ),
-      NeuDiscoverScreen(),
-      NeuLibraryScreen(),
+      DiscoverScreen(),
+      LibraryScreen(),
     ];
   }
 

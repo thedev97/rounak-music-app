@@ -2,18 +2,18 @@ import 'package:flutter/material.dart';
 import 'package:flutter_neumorphic/flutter_neumorphic.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:lottie/lottie.dart';
-import 'package:rounakmusicplayerapp/utils/neuConstants.dart';
+import 'package:rounakmusicplayerapp/core/utils/neuConstants.dart';
 
-class NeuProfileScreen extends StatefulWidget {
+class ProfileScreen extends StatefulWidget {
   String? profileName;
   String? phoneNumber;
-  NeuProfileScreen({Key? key, this.profileName, this.phoneNumber}) : super(key: key);
+  ProfileScreen({Key? key, this.profileName, this.phoneNumber}) : super(key: key);
 
   @override
-  _NeuProfileScreenState createState() => _NeuProfileScreenState();
+  _ProfileScreenState createState() => _ProfileScreenState();
 }
 
-class _NeuProfileScreenState extends State<NeuProfileScreen> {
+class _ProfileScreenState extends State<ProfileScreen> {
   final GlobalKey<ScaffoldState> _profileScaffoldKey =
       new GlobalKey<ScaffoldState>();
 

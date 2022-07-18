@@ -1,26 +1,24 @@
-
-
 import 'dart:async';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:lottie/lottie.dart';
-import 'package:rounakmusicplayerapp/screens/introScreen/neuWalkthroughScreen.dart';
-import 'package:rounakmusicplayerapp/utils/neuConstants.dart';
+import 'package:rounakmusicplayerapp/core/utils/neuConstants.dart';
+import 'package:rounakmusicplayerapp/presentation/screens/introScreen/walkthroughScreen.dart';
 
-class NeuSplashScreen extends StatefulWidget {
-  const NeuSplashScreen({Key? key}) : super(key: key);
+class SplashScreen extends StatefulWidget {
+  const SplashScreen({Key? key}) : super(key: key);
 
   @override
-  _NeuSplashScreenState createState() => _NeuSplashScreenState();
+  _SplashScreenState createState() => _SplashScreenState();
 }
 
-class _NeuSplashScreenState extends State<NeuSplashScreen> {
+class _SplashScreenState extends State<SplashScreen> {
   @override
   void initState() {
     super.initState();
     Timer(Duration(seconds: 3), () {
       Navigator.of(context)
-          .pushReplacement(MaterialPageRoute(builder: (_) => NeuWalkThroughScreen()));
+          .pushReplacement(MaterialPageRoute(builder: (_) => WalkThroughScreen()));
     });
   }
 

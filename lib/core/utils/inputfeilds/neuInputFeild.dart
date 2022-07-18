@@ -3,10 +3,10 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_neumorphic/flutter_neumorphic.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:rounakmusicplayerapp/utils/neuConstants.dart';
+import '../neuConstants.dart';
 
 //? An input field class for all the input boxes in the app.
-class NeuInputField extends StatefulWidget {
+class InputField extends StatefulWidget {
   final Function(String)? onChanged;
   final TextInputType? keyBoardType;
   final String? labelText;
@@ -30,13 +30,12 @@ class NeuInputField extends StatefulWidget {
   final TextStyle? labelStyle;
   final bool enabled;
   final TextStyle? inputTextStyle;
-  // final Color? inputTextColor;
   final List<TextInputFormatter>? inputFormatters;
   final Widget? prefixIcon;
   final Widget? prefix;
   final Widget? suffix;
   final double depth;
-  NeuInputField({
+  InputField({
     Key? key,
     this.onChanged,
     this.keyBoardType,
@@ -59,7 +58,6 @@ class NeuInputField extends StatefulWidget {
     this.borderSide,
     this.hintStyle,
     this.enabled = true,
-    // this.inputTextColor,
     this.inputFormatters,
     this.labelStyle,
     this.prefixIcon,
@@ -70,10 +68,10 @@ class NeuInputField extends StatefulWidget {
   }) : super(key: key);
 
   @override
-  _NeuInputFieldState createState() => _NeuInputFieldState();
+  _InputFieldState createState() => _InputFieldState();
 }
 
-class _NeuInputFieldState extends State<NeuInputField> {
+class _InputFieldState extends State<InputField> {
   @override
   Widget build(BuildContext context) {
     return Padding(
@@ -150,7 +148,7 @@ class _NeuInputFieldState extends State<NeuInputField> {
 }
 
 //? An input field class for all the input boxes in the app.
-class NeuInputFieldOne extends StatefulWidget {
+class InputFieldOne extends StatefulWidget {
   final Function(String)? onChanged;
   final TextInputType? keyBoardType;
   final String? labelText;
@@ -174,13 +172,12 @@ class NeuInputFieldOne extends StatefulWidget {
   final TextStyle? labelStyle;
   final bool enabled;
   final TextStyle? inputTextStyle;
-  // final Color? inputTextColor;
   final List<TextInputFormatter>? inputFormatters;
   final Widget? prefixIcon;
   final Widget? prefix;
   final Widget? suffix;
   final double depth;
-  NeuInputFieldOne({
+  InputFieldOne({
     Key? key,
     this.onChanged,
     this.keyBoardType,
@@ -213,10 +210,10 @@ class NeuInputFieldOne extends StatefulWidget {
   }) : super(key: key);
 
   @override
-  _NeuInputFieldOneState createState() => _NeuInputFieldOneState();
+  _InputFieldOneState createState() => _InputFieldOneState();
 }
 
-class _NeuInputFieldOneState extends State<NeuInputFieldOne> {
+class _InputFieldOneState extends State<InputFieldOne> {
   @override
   Widget build(BuildContext context) {
     var sizeHeight = MediaQuery.of(context).size.height;
@@ -294,7 +291,7 @@ class _NeuInputFieldOneState extends State<NeuInputFieldOne> {
 
 
 //? An input field class for all the input boxes in the app.
-class NeuInputFieldTwo extends StatefulWidget {
+class InputFieldTwo extends StatefulWidget {
   final Function(String)? onChanged;
   final TextInputType? keyBoardType;
   final String? labelText;
@@ -319,13 +316,12 @@ class NeuInputFieldTwo extends StatefulWidget {
   final TextStyle? labelStyle;
   final bool? enabled;
   final TextStyle? inputTextStyle;
-  // final Color? inputTextColor;
   final List<TextInputFormatter>? inputFormatters;
   final Widget? prefixIcon;
   final Widget? prefix;
   final Widget? suffix;
   final double depth;
-  NeuInputFieldTwo({
+  InputFieldTwo({
     Key? key,
     this.onChanged,
     this.keyBoardType,
@@ -349,7 +345,6 @@ class NeuInputFieldTwo extends StatefulWidget {
     this.borderSide,
     this.hintStyle,
     this.enabled = true,
-    // this.inputTextColor,
     this.inputFormatters,
     this.labelStyle,
     this.prefixIcon,
@@ -360,10 +355,10 @@ class NeuInputFieldTwo extends StatefulWidget {
   }) : super(key: key);
 
   @override
-  _NeuInputFieldTwoState createState() => _NeuInputFieldTwoState();
+  _InputFieldTwoState createState() => _InputFieldTwoState();
 }
 
-class _NeuInputFieldTwoState extends State<NeuInputFieldTwo> {
+class _InputFieldTwoState extends State<InputFieldTwo> {
   @override
   Widget build(BuildContext context) {
     var sizeHeight = MediaQuery.of(context).size.height;
@@ -431,7 +426,7 @@ class _NeuInputFieldTwoState extends State<NeuInputFieldTwo> {
 }
 
 //? An input field class for all the input boxes in the app.
-class NeuInputForgotPassword extends StatefulWidget {
+class InputForgotPassword extends StatefulWidget {
   final Function(String)? onChanged;
   final TextInputType? keyBoardType;
   final String? labelText;
@@ -461,7 +456,7 @@ class NeuInputForgotPassword extends StatefulWidget {
   final Widget? prefix;
   final Widget? suffix;
   final double depth;
-  NeuInputForgotPassword({
+  InputForgotPassword({
     Key? key,
     this.onChanged,
     this.keyBoardType,
@@ -485,7 +480,6 @@ class NeuInputForgotPassword extends StatefulWidget {
     this.borderSide,
     this.hintStyle,
     this.enabled = true,
-    // this.inputTextColor,
     this.inputFormatters,
     this.labelStyle,
     this.prefixIcon,
@@ -496,10 +490,10 @@ class NeuInputForgotPassword extends StatefulWidget {
   }) : super(key: key);
 
   @override
-  _NeuInputForgotPasswordState createState() => _NeuInputForgotPasswordState();
+  _InputForgotPasswordState createState() => _InputForgotPasswordState();
 }
 
-class _NeuInputForgotPasswordState extends State<NeuInputForgotPassword> {
+class _InputForgotPasswordState extends State<InputForgotPassword> {
   @override
   Widget build(BuildContext context) {
     var sizeHeight = MediaQuery.of(context).size.height;
@@ -568,7 +562,7 @@ class _NeuInputForgotPasswordState extends State<NeuInputForgotPassword> {
 
 
 //? An input field class for all the input boxes in the app.
-class NeuInputFieldThree extends StatefulWidget {
+class InputFieldThree extends StatefulWidget {
   final Function(String)? onChanged;
   final TextInputType? keyBoardType;
   final String? labelText;
@@ -593,13 +587,12 @@ class NeuInputFieldThree extends StatefulWidget {
   final TextStyle? labelStyle;
   final bool? enabled;
   final TextStyle? inputTextStyle;
-  // final Color? inputTextColor;
   final List<TextInputFormatter>? inputFormatters;
   final Widget? prefixIcon;
   final Widget? prefix;
   final Widget? suffix;
   final double depth;
-  NeuInputFieldThree({
+  InputFieldThree({
     Key? key,
     this.onChanged,
     this.keyBoardType,
@@ -623,7 +616,6 @@ class NeuInputFieldThree extends StatefulWidget {
     this.borderSide,
     this.hintStyle,
     this.enabled = true,
-    // this.inputTextColor,
     this.inputFormatters,
     this.labelStyle,
     this.prefixIcon,
@@ -634,10 +626,10 @@ class NeuInputFieldThree extends StatefulWidget {
   }) : super(key: key);
 
   @override
-  _NeuInputFieldThreeState createState() => _NeuInputFieldThreeState();
+  _InputFieldThreeState createState() => _InputFieldThreeState();
 }
 
-class _NeuInputFieldThreeState extends State<NeuInputFieldThree> {
+class _InputFieldThreeState extends State<InputFieldThree> {
   @override
   Widget build(BuildContext context) {
     var sizeHeight = MediaQuery.of(context).size.height;

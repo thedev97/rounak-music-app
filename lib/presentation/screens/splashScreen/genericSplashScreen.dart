@@ -1,23 +1,23 @@
 import 'dart:async';
 import 'package:flutter/material.dart';
 import 'package:lottie/lottie.dart';
-import 'package:rounakmusicplayerapp/screens/signinScreen/neuLoginScreen.dart';
-import 'package:rounakmusicplayerapp/utils/neuConstants.dart';
+import 'package:rounakmusicplayerapp/core/utils/neuConstants.dart';
+import 'package:rounakmusicplayerapp/presentation/screens/signinScreen/loginScreen.dart';
 
-class NeuGenericSplashScreen extends StatefulWidget {
-  const NeuGenericSplashScreen({Key? key}) : super(key: key);
+class GenericSplashScreen extends StatefulWidget {
+  const GenericSplashScreen({Key? key}) : super(key: key);
 
   @override
-  _NeuGenericSplashScreenState createState() => _NeuGenericSplashScreenState();
+  _GenericSplashScreenState createState() => _GenericSplashScreenState();
 }
 
-class _NeuGenericSplashScreenState extends State<NeuGenericSplashScreen> {
+class _GenericSplashScreenState extends State<GenericSplashScreen> {
   @override
   void initState() {
     super.initState();
     Timer(Duration(seconds: 3), () {
       Navigator.of(context)
-          .pushReplacement(MaterialPageRoute(builder: (_) => NeuLogin()));
+          .pushReplacement(MaterialPageRoute(builder: (_) => LoginScreen()));
     });
   }
 
