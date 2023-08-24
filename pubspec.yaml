@@ -14,15 +14,6 @@ dependencies:
   flutter:
     sdk: flutter
   cupertino_icons: 1.0.5
-  flutter_screenutil: 5.5.2
-  flutter_neumorphic: 3.2.0
-  lottie: 1.2.2
-  #firebase_core: any
-  #firebase_auth: any
-  animated_text_kit: 4.2.0
-  fluttertoast: 8.0.9
-  animations: 2.0.2
-  google_fonts: 2.2.0
 
 dev_dependencies:
   flutter_test:
